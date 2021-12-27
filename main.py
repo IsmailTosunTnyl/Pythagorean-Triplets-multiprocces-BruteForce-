@@ -16,14 +16,12 @@ class TicToc:
         return self.t2 - self.t1
 
 
-def triplets(start_point, end_point, n, increase_amount, shared_a):
+def triplets(start_point, end_point, n, increase_amount, shared_pythagorean_triplets):
     for a in range(start_point, end_point, increase_amount):
-        print("a", a)
-        for b in range(1, n):
-
-            for c in range(1, n):
+        for b in range(a, n):
+            for c in range(b+1, n):
                 if a ** 2 + b ** 2 == c ** 2:
-                    shared_a.append([a, b, c])
+                    shared_pythagorean_triplets.append([a, b, c])
 
 
 if __name__ == '__main__':
