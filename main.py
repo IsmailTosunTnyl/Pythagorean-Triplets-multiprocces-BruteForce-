@@ -16,6 +16,7 @@ class TicToc:
         return self.t2 - self.t1
 
 
+# https://github.com/IsmailTosunTnyl/Pythagorean-Triplets-multiprocces-BruteForce-
 def triplets(start_point, end_point, n, increase_amount, shared_pythagorean_triplets):
     # every process has a unique start point and has a same increase amount as other process which equals cpu count
     # this separate every process from each other
