@@ -17,6 +17,8 @@ class TicToc:
 
 
 def triplets(start_point, end_point, n, increase_amount, shared_pythagorean_triplets):
+    # every process has a unique start point and has a same increase amount as other process which equals cpu count
+    # this separate every process from each other
     for a in range(start_point, end_point, increase_amount):
         for b in range(a + 1, n):
             for c in range(b + 1, n):
@@ -26,9 +28,10 @@ def triplets(start_point, end_point, n, increase_amount, shared_pythagorean_trip
 
 if __name__ == '__main__':
     timer = TicToc()
-
     timer.tic()
-    n = 1000
+
+    # for the most accurate result,choose a number that is divisible by the number of processors
+    n = 800
     cpu_count = os.cpu_count()
 
     number_per_process = int(n / cpu_count)
