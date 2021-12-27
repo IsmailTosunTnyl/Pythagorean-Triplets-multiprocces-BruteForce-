@@ -20,12 +20,13 @@ class TicToc:
 def triplets(start_point, end_point, n, increase_amount, shared_pythagorean_triplets):
     # every process has a unique start point and has a same increase amount as other process which equals cpu count
     # this separate every process from each other
+    print("Process ",os.getpid(),"start working")
     for a in range(start_point, end_point, increase_amount):
         for b in range(a + 1, n):
             for c in range(b + 1, n):
                 if a ** 2 + b ** 2 == c ** 2:
                     shared_pythagorean_triplets.append([a, b, c])
-
+    print("Process ", os.getpid(), "Stop working")
 
 if __name__ == '__main__':
     timer = TicToc()
