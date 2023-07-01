@@ -23,7 +23,7 @@ To run the program, follow these steps:
 2. Navigate to the project directory:
 
    ```shell
-   cd pythagorean-triplets
+   cd Pythagorean-Triplets-multiprocces-BruteForce-
    ```
 
 3. Run the program:
